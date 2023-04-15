@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>Distrito Termico</title>
+  
+</head>
+<body onload="ready()" >  <!-- todo el contenido de la web--> <!-- el get envia el formulario pero solo url de 250 caracteres,el post lo envia en forma de formulario-->
+   <nav> 
+       <h1 class="text -center">Distrito-Energetico</h1>
+               <!--<img src="imagenes/distrito.jpeg" width="400">  -->
+     </nav>
+   
+     <div id="tdt">
+          <h1>Determinar el tamaño del Distrito Térmico</h1>
+          <br>
+          <input type="number"id="servicio" placeholder="Factor servicio" value="" required />
+          <br>
+           <!--name paraa que toque el nombre y quede en la caja de texto-->
+          <input type="number"id="caudal"  placeholder="Caudal"value="" required />
+         <!-- <button type="button" onclick="caudal()">guardar</button>-->
+          <br>
+          <input type="number"id="entrada"  placeholder=" Temperatrura de entrada" value="" required />
+         <!-- <button type="button" onclick="caudal()">guardar</button>-->
+          <br>
+          <input type="number"id="salida"  placeholder="Temperatura Salida"  value="" required/>
+          <button onclick="caudal()"class="button" id="button">guardar</button>
+         <!-- <button type="button" onclick="caudal()">guardar</button>-->
+          
+        
+     </div>
+     <div id="chillers">
+        <h1>Tamaños de chillers Centrifuos y de Absorcion 500TR, 750TR, 1000TR</h1>
+         <!--name paraa que toque el nombre y quede en la caja de texto-->
+         <input type="number"id="c500 " placeholder=" Centrifugos de 500TR"  required />
+         <!--<button type="submit" onclick="centri1()">guardar</button> -->
+         <br>
+        <input type="number"id="c750" placeholder=" Centrifugos de 750TR" required />
+        <!-- <button type="submit" onclick="centri1()">guardar</button>-->
+         <br>
+         <input type="number" id="c1000" placeholder="Centrifugos de 1000TR" required/>
+        <!-- <button type="submit" onclick="centri1()">guardar</button>-->
+         <br>
+         <input type="number"id="a500" placeholder="Absorcion de 500TR" required/>
+        <!-- <button type="submit" onclick="centri1()">guardar</button>-->
+         <br>
+         <input type="number"id="a750" placeholder="Absorcion de 750TR" required/>
+        <!-- <button type="submit" onclick=" centri1()">guardar</button>-->
+         <br>
+         <input type="number"id="a1000" placeholder="Absorcion de 1000TR" required/>
+         <!-- <button type="submit" onclick="centri()">guardar</button> -->
+         <button type="submit" onclick="centri()"class="button" id="button">guardar</button>
+          <div id="tablas">
+     </div>
+     
+
+       <h2>Tabla Centrifugos
+      <table id=" centri " border =" 3 " bordercolor =" blue " cellpacing =" 2 ">
+     </h2>
+    <head>
+     <tr> 
+          <th>Energía</th>
+          <th>Emisiones co2(TCo2 al mes)</th>
+          <th>Capex(Dolares  Megavatios)</th>
+          <th>Opex(Dolares-año)</th>
+     </tr> 
+    </head >
+  <tbody>
+     <tr> 
+       <th> Red pública </th>
+       <td  id ="rp"></td>
+       <td  id ="capex"></td>
+       <td  id ="o"></td>
+     </tr> 
+     <tr> 
+       <th>Microturbina a gas</th>
+       <td  id ="g"></td>
+       <td  id ="c"></td>
+       <td  id ="o"></td>
+     </tr> 
+     <tr> 
+       <th> Solar fotovoltaica </th>
+       <td  id ="0"></td>
+       <td  id ="ft"></td>
+       <td  id ="0"></td>
+     </tr> 
+     <tr> 
+       <th> Energía eólica </th>
+       <td  id ="0"></td>
+       <td  id ="e"></td>
+       <td  id ="o"></td>
+     </tr> 
+     <tr> 
+       <th> Energía biomasa </th>
+       <td  id ="0"></td>
+       <td  id ="b"></td>
+       <td  id ="o"></td>
+     </tr> 
+     <tr> 
+       <th> Toneladas de refrigeración que suministran los chillers centrífugos: </th>
+       <td  id ="totalc"></td>
+       <td  id ="0"></td>
+       <td  id ="0"></td>
+     </tr> 
+  </tbody>
+</table >
+    <br> 
+       
+      <h2>Tabla Absorcion
+<table id="abso" border="3" bordercolor="green" cellspacing="2">
+  </h2>
+  <thead>
+       <tr> 
+         <th> Energía</th>
+         <th>  Emisiones co2(TCo2 al mes)</th>
+         <th> Capex(Dolares  Megavatios)</th>
+         <th> Opex(Dolares-año)</th>
+       </tr> 
+  </thead>
+<tbody>
+       <tr> 
+         <th> Microturbina a gas</th>
+         <td id ="g1"></td>
+         <td id="c1"></td>
+         <td id ="o1"></td>
+       </tr> 
+       <tr> 
+         <th >Solar térmica </th>
+         <td  id ="0"></td>
+         <td  id ="capex1"></td>
+         <td  id="o1"></td>
+       </tr> 
+       <tr> 
+         <th>Energía biomasa</th>
+         <td id ="0"></td>
+         <td id ="b1"></td>
+         <td id ="o1"></td>
+       </tr> 
+       <tr> 
+         <th> Toneladas de refrigeración que suministran los chillers de absorción: </th >
+         <td  id ="totala"></td >
+         <td  id ="0"></td >
+         <td  id ="0"></td >
+       </tr> 
+    </tbody >
+</table >
+  </div> 
+</div>
+<enlace  rel =" hoja de estilo " href ="estilos.css">
+<script src="main.js"></script>
+</body>   
+</html>
