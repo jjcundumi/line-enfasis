@@ -1,68 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-    <title>Distrito Termico</title>
-  
-</head>
-<body onload="ready()" >  <!-- todo el contenido de la web--> <!-- el get envia el formulario pero solo url de 250 caracteres,el post lo envia en forma de formulario-->
-   <nav> 
-       <h1 class="text -center">Distrito-Energetico</h1>
-               <!--<img src="imagenes/distrito.jpeg" width="400">  -->
-     </nav>
+       
+    <title class="text-center">Distrito Termico</title>
+   <link rel="stylesheet" href="boostrap/css/bootstrap.css">
    
-     <div id="tdt">
-          <h1>Determinar el tamaño del Distrito Térmico</h1>
-          <br>
-          <input type="number"id="servicio" placeholder="Factor servicio" value="" required />
-          <br>
-           <!--name paraa que toque el nombre y quede en la caja de texto-->
-          <input type="number"id="caudal"  placeholder="Caudal"value="" required />
-         <!-- <button type="button" onclick="caudal()">guardar</button>-->
-          <br>
-          <input type="number"id="entrada"  placeholder=" Temperatrura de entrada" value="" required />
-         <!-- <button type="button" onclick="caudal()">guardar</button>-->
-          <br>
-          <input type="number"id="salida"  placeholder="Temperatura Salida"  value="" required/>
-          <button onclick="caudal()"class="button" id="button">guardar</button>
-         <!-- <button type="button" onclick="caudal()">guardar</button>-->
-          
-        
-     </div>
-     <div id="chillers">
-        <h1>Tamaños de chillers Centrifuos y de Absorcion 500TR, 750TR, 1000TR</h1>
-         <!--name paraa que toque el nombre y quede en la caja de texto-->
-         <input type="number"id="c500 " placeholder=" Centrifugos de 500TR"  required />
-         <!--<button type="submit" onclick="centri1()">guardar</button> -->
-         <br>
-        <input type="number"id="c750" placeholder=" Centrifugos de 750TR" required />
-        <!-- <button type="submit" onclick="centri1()">guardar</button>-->
-         <br>
-         <input type="number" id="c1000" placeholder="Centrifugos de 1000TR" required/>
-        <!-- <button type="submit" onclick="centri1()">guardar</button>-->
-         <br>
-         <input type="number"id="a500" placeholder="Absorcion de 500TR" required/>
-        <!-- <button type="submit" onclick="centri1()">guardar</button>-->
-         <br>
-         <input type="number"id="a750" placeholder="Absorcion de 750TR" required/>
-        <!-- <button type="submit" onclick=" centri1()">guardar</button>-->
-         <br>
-         <input type="number"id="a1000" placeholder="Absorcion de 1000TR" required/>
-         <!-- <button type="submit" onclick="centri()">guardar</button> -->
-         <button type="submit" onclick="centri()"class="button" id="button">guardar</button>
-          <div id="tablas">
-     </div>
-     
+   <!-- <link rel="stylesheet" href="estilos.css">      background="imagenes/oce.jpg" imagen de fondo-->
+  </head>
+<body class="fw-bolder" background="imagenes/oce.jpg"   onload=ready() > <!-- todo el contenido de la web--> <!-- el get envia el formulario pero solo url de 250 caracteres,el post lo envia en forma de formulario-->
+   
+<!--tamaño del dt-->
+  <nav> 
+    <div class="alert alert-info" role="alert">
+  <h1  class="text-center"  >Distrito Energetico</h1>
+  <h2 class="text-center" >Determinar el tamaño del Distrito Térmico</h2>
+</div>
+  <div class="container text-center"id="tdt">
+  <div class=" row g-2">
+    <div class="col-6">
+      <div class="p-3">
+      <input type="text" id="servicio" placeholder=" Factor de Servicio" value="" required />
+      <button type="button"  onclick="servicio()">Aceptar</button>
 
-       <h2>Tabla Centrifugos
-      <table id=" centri " border =" 3 " bordercolor =" blue " cellpacing =" 2 ">
-     </h2>
-    <head>
-     <tr> 
-          <th>Energía</th>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3"> 
+      <input type="text"id="caudal" placeholder=" Ingrese el  Caudal"value="" required />
+      <button  type="button" onclick="caudal()">Aceptar</button>
+      </div>
+
+    </div>
+    <div class="col-6">
+      <div class="p-3"> 
+      <input type="text"id="entrada" placeholder=" Temperatura Entrada" value="" required />
+     <button  type="button" onclick="entrada()">Aceptar</button>
+      </div>
+
+    </div>
+    <div class="col-6">
+      <div class="p-3"> 
+      <input type="text"id="salida" placeholder=" Temperatura Salida"value="" required/>
+      <button type="button" onclick="salida()">TamañoDT</button>  
+    
+      </div>
+    </div>
+  </div>
+</div>
+   
+
+   
+
+ 
+<!--chiller del dt-->
+
+  </nav>
+  
+  <div class="container text-center" id="chillers">
+    <div class="alert alert-primary" role="alert">
+    <h3>Tamaños de chillers Centrifuos y de Absorcion 500TR, 750TR, 1000TR</h3>
+  </div> 
+    <div class="row g-2">
+      <div class="col-6">
+        <div class="p-3">
+          <input type="text"id="c500 " placeholder=" Centrifugos de 500TR"  required />
+          <button type="button" onclick="c5()">Aceptar</button> 
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3">
+          <input type="tex"id="c750" placeholder=" Centrifugos de 750TR" required />
+          <button type="button" onclick="c7()">Aceptar</button>
+      </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3">
+          <input type="text" id="c1000" placeholder="Centrifugos de 1000TR" required/>
+         <button type="button" onclick="c1()">Aceptar</button>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3">
+          <input type="text"id="a500" placeholder="Absorcion de 500TR" required/>
+         <button type="button" onclick="a5()">Aceptar</button>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3">
+          <input type="text"id="a750" placeholder="Absorcion de 750TR" required/>
+          <button type="button" onclick=" a7()">Aceptar</button>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3">
+          <input type="text"id="a1000" placeholder="Absorcion de 1000TR" value="" required/>
+            <button  type="button" onclick="a1()"class="button btn-primary" id="button">Tabla</button>
+          
+      </div>
+      </div>
+    </div>
+  </div>
+ </div>
+  
+        <div id=" centri ">
+      <table   >
+        <h3 class="text-center" >Tabla Centrifugos </h3>
+    <head >
+     <tr class="alert alert-primary" role="alert"> 
+          <th >Energía</th>
           <th>Emisiones co2(TCo2 al mes)</th>
           <th>Capex(Dolares  Megavatios)</th>
           <th>Opex(Dolares-año)</th>
@@ -70,7 +118,7 @@
     </head >
   <tbody>
      <tr> 
-       <th> Red pública </th>
+       <th> red pública </th>
        <td  id ="rp"></td>
        <td  id ="capex"></td>
        <td  id ="o"></td>
@@ -100,7 +148,7 @@
        <td  id ="o"></td>
      </tr> 
      <tr> 
-       <th> Toneladas de refrigeración que suministran los chillers centrífugos: </th>
+       <th> Toneladas de refrigeración centrífugos: </th>
        <td  id ="totalc"></td>
        <td  id ="0"></td>
        <td  id ="0"></td>
@@ -109,10 +157,11 @@
 </table >
     <br> 
        
-      <h2>Tabla Absorcion
-<table id="abso" border="3" bordercolor="green" cellspacing="2">
-  </h2>
-  <thead>
+ 
+
+<table id="abso">
+  <h2 class="text-center">Tabla Absorcion </h2>
+  <thead  class="alert alert-primary" role="alert" >
        <tr> 
          <th> Energía</th>
          <th>  Emisiones co2(TCo2 al mes)</th>
@@ -140,16 +189,19 @@
          <td id ="o1"></td>
        </tr> 
        <tr> 
-         <th> Toneladas de refrigeración que suministran los chillers de absorción: </th >
+         <th> Toneladas de refrigeración  de absorción: </th >
          <td  id ="totala"></td >
          <td  id ="0"></td >
          <td  id ="0"></td >
        </tr> 
     </tbody >
 </table >
+    </div>
   </div> 
 </div>
 <enlace  rel =" hoja de estilo " href ="estilos.css">
 <script src="main.js"></script>
+
 </body>   
+<script src="boostrap/js/bootstrap.js"></script>
 </html>

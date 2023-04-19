@@ -135,6 +135,8 @@ def chillers(tdt):
     else:
         centrifugos(totalc)
         absorcion(totala)
+        print(tdt)
+        print(tmax)
 
 def centrifugos(parametro1):
     # int se instancia para que salga enteros
