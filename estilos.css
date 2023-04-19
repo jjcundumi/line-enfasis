@@ -5,11 +5,22 @@ button:hover {
     border: 2px solid #010101;
     box-shadow: 1px 1px 5px #888888;
     transition: background-color 0.5s ease-out, color 0.5s ease-out, border 0.5s ease-out, box-shadow 0.
+  
+    blue#0d6efd;
+    indigo:  #6610f2;
+    purple:  #6f42c1;
+    pink:    #d63384;
+    red:     #dc3545;
+    orange:  #fd7e14;
+    yellow:  #ffc107;
+    green:   #198754;
+    teal:    #20c997;
+    cyan:    #0dcaf0;
   }
 
 
 body {  
-    background-color: #610808;
+    background-color: #795c5c;
   }
   button {
     background-color: #dd2825;
@@ -40,5 +51,5 @@ body {
   }
   
   table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgb(116, 84, 84);
   }
