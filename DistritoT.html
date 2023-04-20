@@ -15,8 +15,11 @@
 <!--tamaño del dt-->
   <nav> 
     <div class="alert alert-info" role="alert">
+      
   <h1  class="text-center"  >Distrito Energetico</h1>
+  
   <h2 class="text-center" >Determinar el tamaño del Distrito Térmico</h2>
+
 </div>
   <div class="container text-center"id="tdt">
   <div class=" row g-2">
@@ -44,21 +47,15 @@
     <div class="col-6">
       <div class="p-3"> 
       <input type="text"id="salida" placeholder=" Temperatura Salida"value="" required/>
-      <button type="button" onclick="salida()">TamañoDT</button>  
-    
+      <button type="button" onclick="salida()">TamañoDT</button>
       </div>
     </div>
   </div>
 </div>
-   
-
-   
-
- 
 <!--chiller del dt-->
-
   </nav>
   
+
   <div class="container text-center" id="chillers">
     <div class="alert alert-primary" role="alert">
     <h3>Tamaños de chillers Centrifuos y de Absorcion 500TR, 750TR, 1000TR</h3>
@@ -98,15 +95,15 @@
         <div class="p-3">
           <input type="text"id="a1000" placeholder="Absorcion de 1000TR" value="" required/>
             <button  type="button" onclick="a1()"class="button btn-primary" id="button">Tabla</button>
-          
+            
       </div>
       </div>
     </div>
   </div>
  </div>
   
-        <div id=" centri ">
-      <table   >
+    
+      <table id="centri" border="3" padding="2" >
         <h3 class="text-center" >Tabla Centrifugos </h3>
     <head >
      <tr class="alert alert-primary" role="alert"> 
@@ -153,13 +150,13 @@
        <td  id ="0"></td>
        <td  id ="0"></td>
      </tr> 
+     </div>
+    </div>
   </tbody>
 </table >
     <br> 
        
- 
-
-<table id="abso">
+<table id="abso" border="3">
   <h2 class="text-center">Tabla Absorcion </h2>
   <thead  class="alert alert-primary" role="alert" >
        <tr> 
@@ -173,7 +170,7 @@
        <tr> 
          <th> Microturbina a gas</th>
          <td id ="g1"></td>
-         <td id="c1"></td>
+         <td id="ac"></td>
          <td id ="o1"></td>
        </tr> 
        <tr> 

@@ -123,6 +123,7 @@ def chillers(tdt):
     totales = totala + totalc
 
     tmax = tdt + (tdt*0.5) #Se comprueba el tamano maximo de TR
+    print("tdt vale", tdt)
     print(MAGENTA) # para poner color a la linea
     if totales<=tdt:
         print("\n Las tecnologias seleccionadas no suministran el tamano del DT \n")

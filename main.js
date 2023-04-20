@@ -2,6 +2,7 @@
 function ready() {
   
     document.getElementById("chillers").style.display="none"
+   
     
     
     
@@ -68,7 +69,7 @@ function entrada(){
      
       }
       
-      return salida
+      return total
       
     }
       
@@ -135,15 +136,18 @@ function a1(){
       alert("ingrese un valor numerico")  
       ready ()
       } else  {}
-     
+      
       
     var totala= (500*c5())+(750*c7())+(1000*c1())
     var totalc= (500*a5())+(750*a7())+(1000*a1000)
     var totales = totala + totalc
-    console.log(totales)
-    var  tmax = salida() + (salida()*0.5)
-    console.log("tmax",tmax)
+     let tm=salida()
+    console.log("tm",tm)
+    console.log("sali", salida())
     
+    var  tmax =  (tm*0.5)+tm
+    console.log("tmax",tmax )
+    centrifugo ( totalc,totala ) 
       if(totales <=salida()){
         alert (" Las tecnologias seleccionadas no suministran el tamano del DT ")
         ready ()
@@ -155,7 +159,7 @@ function a1(){
      else{}
 
     //alert ( "El tamaño del distrito termico es: "  +  totales ) 
-       centrifugo ( totalc,totala ) 
+       
     }
     
 
@@ -187,7 +191,7 @@ function  centrifugo ( totalc,totala) {
 
   
       g1 = Number( ( totala * 511.13199046407 ) / 1000 ) ;		
-      c1 = Number( ( totala  *  0.0035174111853 ) * ( 1925000 / 0.88 ) ) ;		
+      ac = Number( ( totala  *  0.0035174111853 ) * ( 1925000 / 0.88 ) ) ;		
       o1 = Number( c * 0.03 ) ;	
       capex1 = Number ( totala * 0.0035174111853 ) ;		
       aft1 =  Number( ( capex1 * 1000000 ) * 1.015 ) ;		
@@ -195,7 +199,7 @@ function  centrifugo ( totalc,totala) {
 
  // Mostramos los valores en la tabla
       document.getElementById ("g1").innerHTML=g1 
-      document.getElementById ("c1").innerHTMLL=c1
+      document.getElementById ("ac").innerHTMLL=ac
       document.getElementById ("o1").innerHTML=o1 
       document.getElementById ("capex1").innerHTML=capex1 
  //document.getElementById("fta").innerHTML = fta;
