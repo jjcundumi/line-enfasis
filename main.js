@@ -3,7 +3,7 @@ function ready() {
   
     document.getElementById("chillers").style.display="none"
    
-    
+    document.getElementById("tabla").style.display="none"
     
     
 }
@@ -137,7 +137,7 @@ function a1(){
       ready ()
       } else  {}
       
-      
+      document.getElementById("tabla").style.display="block"
     var totala= (500*c5())+(750*c7())+(1000*c1())
     var totalc= (500*a5())+(750*a7())+(1000*a1000)
     var totales = totala + totalc
@@ -150,10 +150,12 @@ function a1(){
     centrifugo ( totalc,totala ) 
       if(totales <=salida()){
         alert (" Las tecnologias seleccionadas no suministran el tamano del DT ")
+        document.getElementById("tabla").style.display="none"
         ready ()
       }
       else if (totales >= tmax){
       alert(" Las tecnologias seleccionadas superan el tope del DT")
+      document.getElementById("tabla").style.display="none"
       ready ()
     }
      else{}
