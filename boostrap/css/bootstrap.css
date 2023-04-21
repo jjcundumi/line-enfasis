@@ -6,7 +6,7 @@
  */
 :root,
 [data-bs-theme=light] {
-  --bs-blue: #0d6efd;
+  --bs-blue: #05142a;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -31,7 +31,7 @@
   --bs-gray-900: #212529;
   --bs-primary: #41fd0d;
   --bs-secondary: #6c757d;
-  --bs-success: #198754;
+  --bs-success: #802017;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;

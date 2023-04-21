@@ -3,7 +3,7 @@ function ready() {
   
     document.getElementById("chillers").style.display="none"
    
-    //document.getElementById("tabla").style.display="none"
+    document.getElementById("tabla").style.display="none"
     
     
 }
